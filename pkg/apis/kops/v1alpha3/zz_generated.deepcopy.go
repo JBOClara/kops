@@ -1249,6 +1249,11 @@ func (in *ClusterSubnetSpec) DeepCopyInto(out *ClusterSubnetSpec) {
 		*out = make([]RouteSpec, len(*in))
 		copy(*out, *in)
 	}
+	if in.ResourceBasedNaming != nil {
+		in, out := &in.ResourceBasedNaming, &out.ResourceBasedNaming
+		*out = new(bool)
+		**out = **in
+	}
 	return
 }
 
