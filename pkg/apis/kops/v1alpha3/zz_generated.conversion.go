@@ -3348,6 +3348,7 @@ func autoConvert_v1alpha3_ClusterSubnetSpec_To_kops_ClusterSubnetSpec(in *Cluste
 	} else {
 		out.AdditionalRoutes = nil
 	}
+	out.ResourceBasedNaming = in.ResourceBasedNaming
 	return nil
 }
 
@@ -3377,6 +3378,7 @@ func autoConvert_kops_ClusterSubnetSpec_To_v1alpha3_ClusterSubnetSpec(in *kops.C
 	} else {
 		out.AdditionalRoutes = nil
 	}
+	out.ResourceBasedNaming = in.ResourceBasedNaming
 	return nil
 }
 
